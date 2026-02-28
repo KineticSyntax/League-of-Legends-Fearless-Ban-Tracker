@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fearless Ban Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Champion Roster</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>League Fearless Ban Tracker</h1>
+
+  <div class="container">
+    <header>
+      <div class="subtitle">LEAGUE OF LEGENDS</div>
+      <h1>CHAMPION ROSTER</h1>
+      <div class="divider"></div>
+    </header>
+
+    <div class="controls">
+      <input id="search" placeholder="Search champions…" />
+      <button id="toggleDeleted">DELETED (0)</button>
+      <button id="restoreAll" class="restore hidden">RESTORE ALL</button>
+    </div>
+
+    <div class="stats">
+      <span id="statusText">0 ACTIVE</span>
+      <span id="remainingText"></span>
+    </div>
+
+    <div id="champGrid" class="grid"></div>
+
+    <div id="deletedSection" class="deleted-section hidden">
+      <div class="deleted-title">DELETED CHAMPIONS</div>
+      <div id="deletedList" class="deleted-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

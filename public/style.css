@@ -1,6 +1,138 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32z' fill='none' stroke='%23c9aa71' stroke-width='1'/%3E%3Cpath d='M28 100L0 84V52l28-16 28 16v32z' fill='none' stroke='%23c9aa71' stroke-width='1'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+  background-repeat: repeat;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+header {
   text-align: center;
+  margin-bottom: 28px;
+}
+
+.subtitle {
+  letter-spacing: 0.35em;
+  font-size: 11px;
+  color: #7a6840;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 28px;
+  color: #e8d5a3;
+  margin: 6px 0;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c9aa71, transparent);
+  margin: 12px auto 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  background: #0f1118a5;
+  border: 1px solid #2a2510;
+  color: #c9aa71;
+}
+
+input::selection {
+    background: #59368e99;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #c9aa71;
+  background: transparent;
+  color: #c9aa71;
+  cursor: pointer;
+}
+
+button.restore {
+  border-color: #5a3030;
+  color: #c06060;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 8px;
+}
+
+.card {
+  border: 1px solid #1e1a0f;
+  background: #0f1118;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #c9aa71;
+  transform: scale(1.05);
+}
+
+.card.deleted img {
+  filter: grayscale(1) brightness(0.3);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-name {
+  font-size: 10px;
+  padding: 4px;
+  color: #a08050;
+}
+
+.deleted-section {
+  margin-top: 30px;
+  border-top: 1px solid #1a1a0f;
+  padding-top: 20px;
+}
+
+.deleted-title {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}
+
+.deleted-list span {
+  background: #140d0d;
+  border: 1px solid #3a1a1a;
+  padding: 3px 8px;
+  margin: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
 }
