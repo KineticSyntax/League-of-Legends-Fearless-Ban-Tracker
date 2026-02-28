@@ -1,0 +1,25 @@
+{
+  "name": "league-of-legends-fearless-ban-tracker",
+  "version": "1.0.0",
+  "description": "A ban tracker for fearless in league of legends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KineticSyntax/League-of-Legends-Fearless-Ban-Tracker.git"
+  },
+  "keywords": [],
+  "author": "KineticSyntax",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KineticSyntax/League-of-Legends-Fearless-Ban-Tracker/issues"
+  },
+  "homepage": "https://github.com/KineticSyntax/League-of-Legends-Fearless-Ban-Tracker#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
