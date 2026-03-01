@@ -101,7 +101,7 @@ button.restore {
   transform: scale(1.05);
 }
 
-.card.deleted img {
+.card.deleted .champ-img {
   filter: grayscale(1) brightness(0.3);
 }
 
@@ -135,4 +135,24 @@ button.restore {
   cursor: pointer;
   display: inline-block;
   font-size: 11px;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.champ-img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.ban-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
