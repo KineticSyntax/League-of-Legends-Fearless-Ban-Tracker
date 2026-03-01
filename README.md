@@ -2,7 +2,7 @@
 
 A web-based tracker for **League of Legends Fearless Draft** formats.
 
-> ⚠️ This project is currently **not functional**.  
+> ⚠️ This project is currently **kinda functional**.  
 > It is a side project and under active development.
 
 ---
@@ -53,7 +53,7 @@ You will be able to:
   - Class 
   - Type
   - Name
-- Search and filter champions
+- Search and filter champions (Done)
 
 ---
 
@@ -73,7 +73,7 @@ However, you will always be able to:
 - This is a **side project**
 - Maintained by **one person**
 - Updates may not be immediate
-- Champion icons or data may become outdated
+- Champion icons or data may become outdated (unlikly due to data dragon)
 - Riot adds champions frequently — please be patient
 
 Please do not harass the maintainer (me) over delays or minor inaccuracies.
@@ -82,6 +82,6 @@ Please do not harass the maintainer (me) over delays or minor inaccuracies.
 
 ## Current Status
 
-The project is in early development and not yet functional.
+The project is in early development and not yet fully functional.
 
 ---
