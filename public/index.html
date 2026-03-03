@@ -16,9 +16,27 @@
     </header>
 
     <div class="controls">
-      <input id="search" placeholder="Search champions…" />
-      <button id="toggleDeleted">DELETED (0)</button>
-      <button id="restoreAll" class="restore hidden">RESTORE ALL</button>
+      <div class="top-controls">
+        <input id="search" placeholder="Search champions…" />
+        <div class="tag-filters">
+          <div class="tag-filter-dropdown">
+            <button id="tagDropdownBtn">Filter by Tags ▼</button>
+            <div id="tagDropdownMenu" class="dropdown-menu hidden">
+              <!-- Tag checkboxes will be generated here -->
+            </div>
+          </div>
+        </div>
+        <button id="toggleDeleted">BANNED (0)</button>
+        <button id="restoreAll" class="restore hidden">RESTORE ALL</button>
+      </div>
+
+      <div class="role-filters">
+        <button class="role-btn" data-role="Top">Top</button>
+        <button class="role-btn" data-role="Jungle">Jg</button>
+        <button class="role-btn" data-role="Mid">Mid</button>
+        <button class="role-btn" data-role="ADC">ADC</button>
+        <button class="role-btn" data-role="Support">Sup</button>
+      </div>
     </div>
 
     <div class="stats">

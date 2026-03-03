@@ -44,15 +44,15 @@ Only the lobby creator will be able to:
 
 ---
 
-## Champion Filtering (Planned)
+## Champion Filtering (Done)
 
 You will be able to:
 
 - List champions by:
-  - Role
-  - Class 
-  - Type
-  - Name
+  - Role (Done)
+  - Class (Done) 
+  - Type (Done)
+  - Name (Done)
 - Search and filter champions (Done)
 
 ---

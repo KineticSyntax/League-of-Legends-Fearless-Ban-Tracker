@@ -49,6 +49,7 @@ h1 {
 
 .controls {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -102,7 +103,12 @@ button.restore {
 }
 
 .card.deleted .champ-img {
-  filter: grayscale(1) brightness(0.3);
+  filter: grayscale(1) brightness(0.9);
+}
+
+.card.deleted img {
+  filter: brightness(0.8);
+  opacity: 0.8;
 }
 
 .card img {
@@ -155,4 +161,47 @@ button.restore {
   width: 80%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+.top-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.role-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
+
+.role-btn.active {
+  background: #2a2510;
+  border-color: #e8d5a3;
+  color: #e8d5a3;
+}
+.tag-filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #222;
+  border: 1px solid #555;
+  padding: 10px;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu.hidden {
+  display: none;
+}
+
+.dropdown-menu label {
+  display: block;
+  margin-bottom: 4px;
+  cursor: pointer;
 }
