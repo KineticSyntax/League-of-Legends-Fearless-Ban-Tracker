@@ -59,7 +59,8 @@ You will be able to:
 
 ## Hosting
 
-There **may** eventually be a public website where you can access the tracker.
+There is a public website where you can access the tracker.
+fealessbantracker.com
 
 However, you will always be able to:
 
