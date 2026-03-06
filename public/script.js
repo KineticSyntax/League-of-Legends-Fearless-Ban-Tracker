@@ -43,7 +43,29 @@ const roleButtons = document.querySelectorAll(".role-btn");
     });
     });
 
+function saveState() {
+    const state = {
+        deleted: [...deleted],
+        selectedTags: [...selectedTags],
+        selectedRole: selectedRole,
+        search: searchInput.value,
+        showDeleted: showDeleted
+    };
+    localStorage.setItem("champTrackerState", JSON.stringify(state));
+}
 
+function loadState() {
+    const stateJSON = localStorage.getItem("champTrackerState");
+    if (!stateJSON) return;
+
+    const state = JSON.parse(stateJSON);
+
+    deleted = new Set(state.deleted || []);
+    selectedTags = new Set(state.selectedTags || []);
+    selectedRole = state.selectedRole || null;
+    searchInput.value = state.search || "";
+    showDeleted = state.showDeleted || false;
+}
 
 async function loadChampions() {
     const versions = await fetch(
@@ -151,6 +173,7 @@ function render() {
             if (deleted.has(c.name)) deleted.delete(c.name);
             else deleted.add(c.name);
             render();
+            saveState();
         };
 
         grid.appendChild(card);
@@ -195,6 +218,7 @@ function generateTagDropdown() {
             if (checkbox.checked) selectedTags.add(tag);
             else selectedTags.delete(tag);
             render();
+            saveState();
         });
 
         label.appendChild(checkbox);
@@ -217,17 +241,23 @@ document.addEventListener("click", (e) => {
 
 
 
-searchInput.addEventListener("input", render);
+searchInput.addEventListener("input", () => {
+    render();
+    saveState();
+})
 
 toggleDeletedBtn.addEventListener("click", () => {
     showDeleted = !showDeleted;
     render();
+    saveState();
 });
 
 restoreAllBtn.addEventListener("click", () => {
     deleted.clear();
     showDeleted = false;
     render();
+    saveState();
 });
 
+loadState();
 loadChampions();
