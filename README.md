@@ -37,10 +37,12 @@ You will be able to:
 - Allow others to view:
   - Banned champions
   - Available champions
+  - You don't need to be signed in to view the lobby
 
 Only the lobby creator will be able to:
 - Add banned/played champions
 - Control the session
+- Add other users to manage the lobby
 
 ---
 
